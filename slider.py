@@ -25,9 +25,9 @@ def main(args):
 
 
 if __name__ == '__main__':
-    parser = argparse.ArgumentParser(description='Calculate extra work hours.')
-    parser.add_argument('-d', '--data', default='data/data.csv')
-    parser.add_argument('-o', '--output', default='hours.md')
-    parser.add_argument('-f', '--format', default='github')
+    parser = argparse.ArgumentParser(description='Calculate extra work hours.', formatter_class=argparse.ArgumentDefaultsHelpFormatter)
+    parser.add_argument('-d', '--data', default='data/data.csv', help='input file')
+    parser.add_argument('-o', '--output', default='hours.md', help='output file')
+    parser.add_argument('-f', '--format', default='github', help='output table format for tabulate [https://github.com/astanin/python-tabulate#table-format]')
     args = parser.parse_args()
     main(args)
