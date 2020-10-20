@@ -22,6 +22,7 @@ def main(args: argparse.Namespace) -> None:
                           showindex='never',
                           headers='keys')
         out.write(output)
+        out.write('\n')
         print(output)
 
 
